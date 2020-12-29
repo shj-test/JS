@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+    <script src = "https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+    <script>
+        function f() {
+            var sex = document.getElementById("boy")
+            var pwd = document.getElementById("password")
+            var zpwd = document.getElementById("zpassword")
+            if(sex.checked==true){
+                alert("boy")
+            }
+            zpwd.value=md5(pwd.value)
+            return true
+        }
+
+    </script>
+</head>
+<body>
+<form action = "https://www.baidu.com" method = "post" onsubmit = "return f()">
+    <p>
+        <span>用户名：</span><input type="text" id = "username" name = "username"/>
+    </p>
+    <p>
+        <span>密码：</span><input type="password" id = "password" />
+    </p>
+        <input type="hidden" id = "zpassword"/>
+    <input type = "hidden" id = "md5-password" name = "password">
+    <span>性别：</span>
+    <input type = "radio" name = "sex" value = "man" id = "boy"/>男
+    <input type = "radio" name = "sex" value = "woman" id = "girl"/>女
+
+    <!--绑定事件 onclick 被点击-->
+    <button type = "submit">提交</button>
+
+</form>
+
+</body>
+</html>

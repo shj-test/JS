@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+
+    <script>
+
+        'use strick';// 严格检查模式，设置ES6
+        let a=1;// 定义变量
+        var ss="abc"; // 字符串：单引号或双引号
+        var arr=[1,2,'hello',null]; // 数组：可以包含任意类型
+        /*
+        数组方法：
+         slice()截取数组的一部分
+         push()压入尾部
+         pop()弹出尾部
+         unshift()压入头部
+         shift()弹出头部
+         sort()排序
+          */
+        var b = 2;// 定义变量
+        // ``多行字符串
+        var msg=`hello
+        java
+        你好！
+        `;
+        // 模板字符串，用${}取值
+        var c=`我是${a}`;
+        /*
+        定义对象，使用逗号隔开
+        动态删减：delete person.name
+        person.phone
+         */
+        var person={
+            name:"shj",
+            age:22,
+            email:'123425@qq.com'
+        };
+        // map键值对
+        var map=new Map([["shj",90],["tom",60]]);
+        map.get();
+        map.set();// 新增或修改
+        map.delete();
+        //set无序不重复的集合
+        var set=new Set([1,2,3,3,3]);
+        set.add();
+        set.delete();
+        set.has();
+        //for in
+        for(var x in arr){
+            console.log(x)// 输出下标：0，1，2，3
+        }
+        //for of 遍历值
+        for(var x of map){
+            console.log(x)
+        }
+        console.log("hello word");// 浏览器控制台打印输出
+        alert(c);// 弹窗
+    </script>
+</head>
+<body>
+
+</body>
+</html>

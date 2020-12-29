@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内部对象</title>
+    <script>
+        //typeof 判断数据类型
+        if(typeof 123=="number"){
+            console.log(true)
+        }
+        if(typeof ""=="string"){
+            console.log(true)
+        }
+        if(typeof []=="object"){
+            console.log(true)
+        }
+        var now = new Date()
+        // 对象
+        var person={
+            name:"shj",
+            age:22,
+            email:'123425@qq.com'
+        };
+        // 对象转JSON
+        var json = JSON.stringify(person);
+        // JSON 转对象
+        var obj = JSON.parse(json)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

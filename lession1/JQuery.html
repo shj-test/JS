@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery</title>
+    <script src="lib/jquery-3.4.1.js"></script>
+
+
+</head>
+<body>
+    <a href="" id="a">点击</a>
+    <!--$('p').click();//标签选择器
+    $('#id1').click();//id选择器
+    $('.class1').click();//class选择器-->
+    <script>
+        /*
+        当网页元素加载完毕之后，响应事件
+        $(document).ready(function(){})==$(function())
+        $(function () {
+            alert("sss")
+        })
+        */
+        $('#a').click(function () {
+            alert("hello")
+        })
+        /*
+        $('#a').show();// 显示
+        $('#a').hide();// 隐藏
+        */
+        /*
+        $('#test-ul li[name=python]').css({"color","red"});
+        $('#a').text()// 获得值
+        $('#a').text("dianji")// 设置值
+        $('#a').html("<strong>dianji</strong>")// 设置值
+        */
+    </script>
+</body>
+</html>

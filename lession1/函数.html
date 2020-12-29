@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数</title>
+    <script>
+        /*定义函数方式1
+        function abs(x) {
+            return x
+        }
+        定义函数方式2
+        var abs=function (x) {
+            return x
+        }*/
+        var abs=function (x,y,...rest) {
+            console.log(arguments)//arguments 参数数组
+            console.log(rest)
+            return x
+        }
+        /*全局对象window:默认所有全局变量绑定在window
+        如果不同的js文件，使用了相同的全局变量，就会产生冲突—>如何减少这样的冲突？
+        把自己的代码全部放入自己定义的唯一空间名字中，降低全局命名冲突问题~*/
+        var shj={}
+        shj.sex
+        shj.abs=function (x) {
+            return x
+        }
+        //const 常量 不可变
+        const name="shj"
+    </script>
+</head>
+<body>
+
+</body>
+</html>

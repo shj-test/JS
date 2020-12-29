@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文档对象</title>
+
+
+</head>
+
+<body>
+    <div id="app" style="height: 100px" >
+        <ul id="ss">
+            <li id="kk">java</li>
+            <li>jquery</li>
+        </ul>
+    </div>
+    <hr>
+   <p id="h">hello</p>
+
+    <script>
+        var app = document.getElementById('app');
+        app.style.color="red"
+        app.style.fontSize="20px"
+        var ul=document.getElementById("ss")
+        var h=document.getElementById("h")
+        /*删除第一个子节点
+        ul.removeChild(ul.children[0])*/
+        //追加节点
+        app.appendChild(h)
+        // 新建一个p标签
+        var newP=document.createElement('p')
+        newP.id = 'newP';
+        // 设置属性
+        newP.setAttribute("style","color:blue")
+        newP.innerText='hello,js'
+        // 插入节点，insertBefore(newNode,targetNode)
+        app.insertBefore(newP,ul)
+        /* 修改文本的值
+         father.innerText='123'
+         father.innerHTML='<strong>123</strong>'*/
+    </script>
+
+</body>
+</html>
